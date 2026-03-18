@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Calendar</title>
+    <style>
+      :root {
+        --bg:         #f0f4f9;
+        --surface:    #ffffff;
+        --border:     #e3e8ef;
+        --text-1:     #1a1f36;
+        --text-2:     #4f566b;
+        --text-3:     #8792a2;
+        --blue:       #1a73e8;
+        --blue-bg:    #e8f0fe;
+        --green:      #1e7e34;
+        --green-bg:   #d4edda;
+        --red:        #c5221f;
+        --red-bg:     #fce8e6;
+        --orange:     #b45309;
+        --orange-bg:  #fef3c7;
+        --radius-s:   8px;
+        --radius-m:   12px;
+        --radius-l:   16px;
+        --shadow-s:   0 1px 3px rgba(26,31,54,.08), 0 1px 2px rgba(26,31,54,.04);
+        --shadow-m:   0 4px 16px rgba(26,31,54,.10);
+        --nav-h:      58px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        width: 400px;
+        height: 560px;
+        overflow: hidden;
+        font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: var(--text-1);
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+      }
+
+      #root {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      button { font-family: inherit; }
+
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #c5cdd8; }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/popup/main.tsx"></script>
+  </body>
+</html>
